@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Web Survival Game</title>
+</head>
+<body>
+    <div id="game-container">
+        <!-- 게임 UI -->
+        <div id="status-bar">
+            <div>🌿 식량: <span id="food-count">0</span></div>
+            <div>💧 물: <span id="water-count">0</span></div>
+            <div>🪵 나무: <span id="wood-count">0</span></div>
+            <div>⚒️ 금속: <span id="metal-count">0</span></div>
+            <div>❤️ 체력: <span id="health">100</span></div>
+        </div>
+
+        <!-- 맵 및 플레이어 영역 -->
+        <div id="map">
+            <div id="player">🧑</div>
+        </div>
+
+        <!-- 행동 버튼 -->
+        <div id="actions">
+            <button onclick="gatherResources('food')">🌿 자원 채집 (식량)</button>
+            <button onclick="gatherResources('water')">💧 자원 채집 (물)</button>
+            <button onclick="buildDefense()">🏠 기지 강화</button>
+            <button onclick="startCombat()">⚔️ 전투 시작</button>
+        </div>
+    </div>
+
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/resources.js"></script>
+    <script src="./scripts/combat.js"></script>
+</body>
+</html>
